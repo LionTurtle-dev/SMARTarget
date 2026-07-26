@@ -1,0 +1,19 @@
+{
+  "name": "data_handler_srv",
+  "version": "1.0.0",
+  "description": "Ez a szerver kezeli a feladatokat tároló adatokat.",
+  "keywords": [
+    "to_do",
+    "missions"
+  ],
+  "author": "LionTurtle-dev",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^10.8.0",
+    "nodemon": "^3.1.14"
+  }
+}
