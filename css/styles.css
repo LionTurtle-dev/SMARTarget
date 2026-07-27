@@ -1,0 +1,73 @@
+body {
+  font-size: 2em;
+  display: flex;
+}
+body menu {
+  padding-left: 4em;
+}
+
+menu:has(input[type=checkbox]:checked) .seeker {
+  display: block;
+}
+menu:has(input[type=checkbox]:checked) #s {
+  list-style-type: disclosure-closed;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+menu ul li:hover {
+  list-style-type: disclosure-closed;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+menu ul li {
+  list-style-type: none;
+}
+menu ul li input {
+  display: none;
+}
+menu input {
+  height: 2em;
+  border-radius: 15px;
+}
+
+.seeker {
+  display: none;
+}
+.seeker button {
+  border-radius: 13px;
+  height: 2.3em;
+  width: 6em;
+  font-weight: bold;
+}
+.seeker input {
+  width: 23em;
+}
+
+@media screen and (max-width: 415px) {
+  body {
+    font-size: 1.6em;
+    justify-content: flex-start;
+  }
+  body menu:has(input[type=checkbox]:checked) #s {
+    list-style-type: disclosure-closed;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  body menu:has(input[type=checkbox]:checked) .seeker {
+    display: flex;
+    flex-direction: column;
+  }
+  body menu:has(input[type=checkbox]:checked) .seeker button {
+    margin-top: 0.5em;
+    width: 23.5em;
+    font-weight: bold;
+  }
+  body menu {
+    padding-left: 1em;
+  }
+  .seeker {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

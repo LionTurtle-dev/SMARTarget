@@ -1,0 +1,29 @@
+@media screen and (max-width: 415px) {
+    body {
+        font-size: 1.6em;
+        justify-content: flex-start;
+        menu {
+            &:has(input[type="checkbox"]:checked) {
+                #s {
+                    list-style-type: $selected-li;
+                    font-size: 1.1em;
+                    font-weight: bold;
+                }
+                .seeker {
+                    display: flex;
+                    flex-direction: column;
+                    button {
+                        margin-top: 0.5em;
+                        width: 23.5em;
+                        font-weight: bold;
+                    }
+                }
+            }
+            padding-left: 1em;
+        }
+    }
+
+    .seeker {
+        display: none;
+    }
+}

@@ -1,0 +1,58 @@
+$spell: 2em;
+$selected-li: disclosure-closed;
+
+body {
+    font-size: 2em;
+    display: flex;
+    menu {
+        padding-left: 4em;
+    }
+}
+
+menu {
+    &:has(input[type="checkbox"]:checked) {
+        .seeker{
+            display: block;
+        }
+        #s {
+            list-style-type: $selected-li;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    }
+
+    ul {
+        li:hover {
+            list-style-type: $selected-li;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        li {
+            list-style-type: none;
+            input {
+                display: none;
+            }
+
+        }
+    }
+
+    input {
+        height: $spell;
+        border-radius: 15px;
+    }
+}
+
+.seeker {
+    display: none;
+    button {
+        border-radius: 13px;
+        height: 2.3em;
+        width: 6em;
+        font-weight: bold;
+    }
+    input {
+        width: 23em;
+    }
+}
+@import "mobil"
