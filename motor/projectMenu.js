@@ -1,10 +1,9 @@
 /* 
 Ez a program felel a Grafikus Felhasználói Felület (GUI) működéséért.
 */
-
+let projects;
 const HEAD = document.getElementById("head");
-
-HEAD.innerHTML = `
+const MAIN_MENU = `
 <menu>
     <ul>
         <li id="new-project">Új Project</li>
@@ -18,10 +17,8 @@ HEAD.innerHTML = `
             </div>
         </li>
     </ul>
-</menu>`;
-const NEW_PROJECT   = document.getElementById('new-project');
-const LIST_PROJECTS = document.getElementById('list-projects');
-
+</menu>
+`;
 const DASHBOARD = `
 <menu>
     <ul>
@@ -40,4 +37,22 @@ const DASHBOARD = `
     </ul>
 </menu>
 `;
+
+const myHeaders = new Headers();
+myHeaders.set('Mission', 'Get-Projects-Menu')
+myHeaders.set('Content-Type', 'application/json')
+fetch('http://localhost:3333/data/projects.json', myHeaders)
+    .then((response) => response.json())
+    .then((data) => {
+        projects = data;
+        // console.log(projects);
+        HEAD.innerHTML = MAIN_MENU;
+        const NEW_PROJECT   = document.getElementById('new-project');
+        const LIST_PROJECTS = document.getElementById('list-projects');
+    })
+    .catch((reas) => {
+        HEAD.innerHTML = `<h1>Nem sikerült betölteni az adatokat.</h1>`;
+        console.log(this)
+    })
+
 
