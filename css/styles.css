@@ -1,31 +1,43 @@
 body {
   font-size: 2em;
-  display: flex;
 }
-body menu {
-  padding-left: 4em;
-}
-
-menu:has(input[type=checkbox]:checked) .seeker {
+body header * {
   display: block;
 }
-menu:has(input[type=checkbox]:checked) #s {
+body header h1 {
+  margin: 0;
+  text-align: center;
+}
+body header small {
+  text-align: center;
+}
+body main {
+  display: flex;
+}
+body #mn menu {
+  padding: 1em 0 0 1em;
+}
+body #mn menu:has(input[type=checkbox]:checked) .seeker {
+  display: block;
+}
+body #mn menu:has(input[type=checkbox]:checked) #s {
   list-style-type: disclosure-closed;
   font-size: 1.1em;
   font-weight: bold;
 }
-menu ul li:hover {
+body #mn menu ul li:hover {
   list-style-type: disclosure-closed;
   font-size: 1.1em;
   font-weight: bold;
+  font-style: italic;
 }
-menu ul li {
+body #mn menu ul li {
   list-style-type: none;
 }
-menu ul li input {
+body #mn menu ul li input {
   display: none;
 }
-menu input {
+body #mn menu input {
   height: 2em;
   border-radius: 15px;
 }
@@ -45,25 +57,34 @@ menu input {
 
 @media screen and (max-width: 415px) {
   body {
-    font-size: 1.6em;
+    font-size: 1.2em;
+  }
+  body #mn {
     justify-content: flex-start;
   }
-  body menu:has(input[type=checkbox]:checked) #s {
+  body #mn menu {
+    padding: 0;
+    margin-left: -2em;
+  }
+  body #mn menu:has(input[type=checkbox]:checked) #s {
     list-style-type: disclosure-closed;
     font-size: 1.1em;
     font-weight: bold;
   }
-  body menu:has(input[type=checkbox]:checked) .seeker {
+  body #mn menu:has(input[type=checkbox]:checked) .seeker {
     display: flex;
     flex-direction: column;
   }
-  body menu:has(input[type=checkbox]:checked) .seeker button {
+  body #mn menu:has(input[type=checkbox]:checked) .seeker input {
+    width: 20em;
+  }
+  body #mn menu:has(input[type=checkbox]:checked) .seeker button {
     margin-top: 0.5em;
-    width: 23.5em;
+    width: 20.5em;
     font-weight: bold;
   }
-  body menu {
-    padding-left: 1em;
+  body main {
+    justify-content: center;
   }
   .seeker {
     display: none;

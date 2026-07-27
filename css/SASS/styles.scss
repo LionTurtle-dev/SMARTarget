@@ -3,45 +3,59 @@ $selected-li: disclosure-closed;
 
 body {
     font-size: 2em;
-    display: flex;
-    menu {
-        padding-left: 4em;
+    header * {
+        display: block;
     }
-}
-
-menu {
-    &:has(input[type="checkbox"]:checked) {
-        .seeker{
-            display: block;
+    header {
+        h1 {
+            margin: 0;
+            text-align: center;
         }
-        #s {
-            list-style-type: $selected-li;
-            font-size: 1.1em;
-            font-weight: bold;
+        small {
+            text-align: center;
         }
     }
+    main {
+        display: flex;
+    }
 
-    ul {
-        li:hover {
-            list-style-type: $selected-li;
-            font-size: 1.1em;
-            font-weight: bold;
-        }
-
-        li {
-            list-style-type: none;
-            input {
-                display: none;
+    #mn menu {
+        padding: 1em 0 0 1em;
+        &:has(input[type="checkbox"]:checked) {
+            .seeker{
+                display: block;
             }
-
+            #s {
+                list-style-type: $selected-li;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+        }
+    
+        ul {
+            li:hover {
+                list-style-type: $selected-li;
+                font-size: 1.1em;
+                font-weight: bold;
+                font-style: italic;
+            }
+    
+            li {
+                list-style-type: none;
+                input {
+                    display: none;
+                }
+    
+            }
+        }
+    
+        input {
+            height: $spell;
+            border-radius: 15px;
         }
     }
-
-    input {
-        height: $spell;
-        border-radius: 15px;
-    }
 }
+
 
 .seeker {
     display: none;
@@ -56,3 +70,4 @@ menu {
     }
 }
 @import "mobil"
+
