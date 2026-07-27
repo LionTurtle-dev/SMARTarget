@@ -2,7 +2,7 @@
 Ez a program felel a Grafikus Felhasználói Felület (GUI) működéséért.
 */
 let projects;
-const HEAD = document.getElementById("head");
+const MN = document.getElementById("mn");
 const MAIN_MENU = `
 <menu>
     <ul>
@@ -48,7 +48,7 @@ fetch('http://localhost:3333/data/projects.json', myHeaders)
     .then((data) => {
         projects = data;
         // console.log(projects);
-        HEAD.innerHTML = MAIN_MENU;
+        MN.innerHTML = MAIN_MENU;
         const NEW_PROJECT   = document.getElementById('new-project');
         const LIST_PROJECTS = document.getElementById('list-projects');
     })
