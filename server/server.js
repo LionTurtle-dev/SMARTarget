@@ -47,7 +47,9 @@ const Server = HTTP.createServer((req, res) => {
         })
     }
     
-    /* Ez a kód még átnézendő, az adatfolyamok működésének jobban utána kell néznem. */
+    /* FIGYELEM!!!!!
+    Ez a kód még átnézendő, az adatfolyamok működésének jobban utána kell néznem. 
+    */
     let full_data;
     if (req.method === 'POST') {
         let body = [];
