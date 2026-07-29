@@ -1,13 +1,13 @@
-<form action="">
+<form action="" id="submit">
     <fieldset>
         <legend><strong>Új Project</strong></legend>
         <label for="name">Project Neve*:</label>
-        <input title="Adj egy frappáns nevet a project-ednek!" placeholder="Új Project" id="name" type="text" required autofocus><br>
+        <input name="project-name" title="Adj egy frappáns nevet a project-ednek!" placeholder="Új Project" id="name" type="text" required autofocus><br>
         <label for="description">Project Leírása</label><br>
-        <textarea title="Adj egy rövid leírást a project-ről, hogy könnyebben átlásd, mit kell csinálnod!" placeholder="Project rövid Leírása" id="description" cols="45" rows="10"></textarea><br>
+        <textarea name="project-description" title="Adj egy rövid leírást a project-ről, hogy könnyebben átlásd, mit kell csinálnod!" placeholder="Project rövid Leírása" id="description" cols="45" rows="10"></textarea><br>
     </fieldset>
     <div id="buttons">
-        <button type="submit" id="submit">Project létrehozása</button>
+        <button type="submit">Project létrehozása</button>
     </div>
 </form>
 <button id="cancel">Mégse</button>
