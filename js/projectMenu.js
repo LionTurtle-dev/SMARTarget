@@ -158,7 +158,7 @@ function main() {
             main_buttons();
         })
         .catch((reas) => {
-            HEAD.innerHTML = `<h1>Nem sikerült betölteni az adatokat.</h1>`;
+            HEAD.innerHTML = `<h1>Nem sikerült betölteni az adatokat.</h1><p>${reas}</p>`;
             console.log(this)
         })
 }
